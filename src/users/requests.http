@@ -1,0 +1,49 @@
+### Create a new user
+
+ 
+POST http://localhost:3500/auth/signup
+
+content-type: application/json
+
+{
+    "email": "asdf@email.com",
+    "password": "asdlfkajsd"
+}
+
+### Find a specific user with an ID
+
+GET http://localhost:3500/auth/1
+
+### Find all users with a given email
+
+GET http://localhost:3500/auth?email=asdf@asdf.com
+
+### Delete a user given ID
+
+DELETE http://localhost:3500/auth/1
+
+
+### Update a user
+
+PATCH http://localhost:3500/auth/2
+content-type: application/json
+{
+    email: "aaaaa@aaaa.com"
+}
+
+
+### Set a color
+
+GET http://localhost:3500/auth/colors/red
+
+
+### Get a color
+GET http://localhost:3500/auth/colors
+
+### get currently signed in user
+GET http://localhost:3500/auth/whoami
+
+
+### sign out
+
+@POST http://localhost:3500/auth/signout
